@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* font  */
+  --font-sans: iran;
+
+  /* color  */
+  --color-primary: #622B14;
+  --color-secondary: #995F2F;
+  --color-accent: #978F66;
+  --color-four: #E4D6A9;
+}
+
+@font-face {
+  font-family: iran;
+  src: url("../src/fonts/IRANSans.eot");
+  src: url("../src/fonts/IRANSans.ttf");
+  src: url("../src/fonts/IRANSans.woff");
+  src: url("../src/fonts/IRANSans.woff2");
+}
+
+body{
+  background-color: #E4D6A9;
+}
+
+
+.opinion-swiper .swiper-button-next,
+.opinion-swiper .swiper-button-prev {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #8b5e3c;
+}
+
+.opinion-swiper .swiper-button-next::after,
+.opinion-swiper .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+.opinion-swiper .swiper-pagination {
+  position: relative;
+  margin-top: 30px;
+}
+
+.opinion-swiper .swiper-pagination-bullet {
+  background-color: #8b5e3c;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+.opinion-swiper .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 999px;
+  opacity: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
