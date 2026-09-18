@@ -12,29 +12,26 @@ import ScrollToTop from "./components/ScrollToTop";
 import NotFound from "./components/NotFound";
 import BlogDetail from "./components/BlogDetail";
 
-
 export default function App() {
   return (
-    <>
-      <Router>
-        <ScrollToTop />
-        <ReviewsProvider>
-          <SearchProvider>
-            <CartProvider>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/add-review" element={<AddReview />} />
-                <Route path="/AllProducts" element={<AllProducts />} />
-                <Route path="/Cart" element={<Cart />} />
-                <Route path="*" element={<NotFound />} />
-                <Route path="/blog/:slug" element={<BlogDetail />} />
-              </Routes>
-            </CartProvider>
-          </SearchProvider>
-        </ReviewsProvider>
-      </Router>
-    </>
+    <Router basename="/aroma-coffee/">
+      <ScrollToTop />
+      <ReviewsProvider>
+        <SearchProvider>
+          <CartProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/add-review" element={<AddReview />} />
+              <Route path="/AllProducts" element={<AllProducts />} />
+              <Route path="/Cart" element={<Cart />} />
+              <Route path="/blog/:slug" element={<BlogDetail />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </CartProvider>
+        </SearchProvider>
+      </ReviewsProvider>
+    </Router>
   );
 }
